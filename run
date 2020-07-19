@@ -1,0 +1,8 @@
+#!/bin/bash
+python scraper/scraper.py \
+    --uploaded_photos False \
+    --friends_photos False \
+    --friends_small_size False \
+    --photos_small_size False \
+    --total_scrolls 1 \
+    --scroll_time 8
