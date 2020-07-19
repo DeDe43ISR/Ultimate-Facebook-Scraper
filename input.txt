@@ -1,3 +1,15 @@
-#Lines starting with # and empty lines will be ignored
-https://www.facebook.com/andrew.ng.96
-https://www.facebook.com/zuck
+#https://www.facebook.com/groups/101875683484689
+#https://www.facebook.com/groups/423017647874807/
+https://www.facebook.com/groups/360907814316510/
+#https://www.facebook.com/groups/RentinTLV/
+#https://www.facebook.com/groups/519771078192146/
+#https://www.facebook.com/groups/108784732614979/
+#https://www.facebook.com/groups/1110501595666914/
+#https://www.facebook.com/groups/166988317557433/
+#https://www.facebook.com/groups/dirotTA/
+#https://www.facebook.com/groups/barothashaga/
+#https://www.facebook.com/groups/2065942027026008/
+#https://www.facebook.com/groups/1394448324105253/
+#https://www.facebook.com/groups/2465129400435620/
+#https://www.facebook.com/groups/TLV3000NIS/
+#https://www.facebook.com/groups/1611176712488861/
