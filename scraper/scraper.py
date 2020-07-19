@@ -618,27 +618,28 @@ def get_group_post_as_line(post_id, photos_dir):
         if link != "":
             link = link.get_attribute("href")
         post_type = ""
-        status = '"' + utils.get_status(data, selectors).replace("\r\n", " ") + '"'
+        status = '"' + utils.get_status(data, selectors).replace("\n", " ") + '"'
         photos = utils.get_post_photos_links(data, selectors, photos_small_size)
         comments = get_comments()
-        photos = image_downloader(photos, photos_dir)
+#        photos = image_downloader(photos, photos_dir)
+        photos = 'Disable'
         line = (
             str(time)
-            + "||"
+            + " || "
             + str(post_type)
-            + "||"
+            + " || "
             + str(title)
-            + "||"
+            + " || "
             + str(status)
-            + "||"
+            + " || "
             + str(link)
-            + "||"
+            + " || "
             + str(post_id)
-            + "||"
+            + " || "
             + str(photos)
-            + "||"
+            + " || "
             + str(comments)
-            + "\n"
+            + " #\n "
         )
         return line
     except Exception:
@@ -796,7 +797,7 @@ def scraper(**kwargs):
         exit(1)
     urls = [
         facebook_https_prefix + facebook_link_body + get_item_id(line)
-        for line in open("input.txt", newline="\r\n")
+        for line in open("input.txt", newline="\n")
         if not line.lstrip().startswith("#") and not line.strip() == ""
     ]
 
