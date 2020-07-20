@@ -240,8 +240,7 @@ def create_post_file(filename):
     """
     f = open(filename, "w", newline="\r\n", encoding="utf-8")
     f.writelines(
-        "TIME || TYPE  || TITLE || STATUS || LINKS(Shared Posts/Shared Links etc) || POST_ID || "
-        "PHOTO || COMMENTS " + "\n"
+        "TIME || TITLE || STATUS || LINKS || \n"
     )
     return f
 
@@ -617,29 +616,17 @@ def get_group_post_as_line(post_id, photos_dir):
         link = utils.get_div_links(data, "a", selectors)
         if link != "":
             link = link.get_attribute("href")
-        post_type = ""
         status = '"' + utils.get_status(data, selectors).replace("\n", " ") + '"'
-        photos = utils.get_post_photos_links(data, selectors, photos_small_size)
-        comments = get_comments()
-#        photos = image_downloader(photos, photos_dir)
-        photos = 'Disable'
+        post_link = facebook_https_prefix + facebook_link_body + post_id
         line = (
             str(time)
-            + " || "
-            + str(post_type)
-            + " || "
+            + " ||  "
             + str(title)
-            + " || "
+            + " ||  "
             + str(status)
-            + " || "
-            + str(link)
-            + " || "
-            + str(post_id)
-            + " || "
-            + str(photos)
-            + " || "
-            + str(comments)
-            + " #\n "
+            + " ||  "
+            + str(post_link)
+            + " \n "
         )
         return line
     except Exception:
