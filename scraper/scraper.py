@@ -240,7 +240,7 @@ def create_post_file(filename):
     """
     f = open(filename, "w", newline="\r\n", encoding="utf-8")
     f.writelines(
-        "TIME || TITLE || STATUS || LINKS || \n"
+        "TIME | TITLE | STATUS | LINKS | \n"
     )
     return f
 
@@ -620,13 +620,13 @@ def get_group_post_as_line(post_id, photos_dir):
         post_link = facebook_https_prefix + facebook_link_body + post_id
         line = (
             str(time)
-            + " ||  "
+            + "|"
             + str(title)
-            + " ||  "
+            + "|"
             + str(status)
-            + " ||  "
+            + "|"
             + str(post_link)
-            + " \n "
+            + "\n"
         )
         return line
     except Exception:
