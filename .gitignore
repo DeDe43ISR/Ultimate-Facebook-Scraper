@@ -124,6 +124,7 @@ scraper/params.json
 scraper/input.txt
 
 ./credentials.yaml
+credentials.yaml
 
 ## Python venv
 venv
