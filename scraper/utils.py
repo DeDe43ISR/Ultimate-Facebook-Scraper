@@ -79,10 +79,7 @@ def get_status(x, selectors):
         try:
             status = x.find_element_by_xpath(selectors.get("status_exc")).text
         except Exception:
-            try:
-                status = x.find_element_by_xpath(selectors.get("shared_status")).text
-            except Exception:
-                pass
+            pass
     return status
 
 
